@@ -15,16 +15,16 @@ const Loading = () => {
           id="hexagon-outline"
           d="M30 2 L90 2 L118 52 L90 102 L30 102 L2 52 Z"
           stroke="#64ffda"
-          stroke-width="5"
+          strokeWidth="5"
         />
         <text
           x="50%"
           y="50%"
-          dominant-baseline="middle"
-          text-anchor="middle"
+          dominantBaseline="middle"
+          textAnchor="middle"
           fill="#64ffda"
-          font-size="40"
-          font-family="Arial, sans-serif"
+          fontSize="40"
+          fontFamily="Arial, sans-serif"
         >
           M
         </text>
