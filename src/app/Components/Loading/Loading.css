@@ -9,7 +9,12 @@
     height: 100%;
     background-color: var(--dark-navy);
     z-index: 10;
-    animation: fadeOut 0.5s ease-in forwards 2.5s;
+    animation: fadeBackground 0.5s ease-in forwards 2.2s;
+}
+
+@keyframes fadeBackground{
+    from{background-color: var(--dark-navy)}
+    to{background-color: var(--navy)}
 }
 
 @keyframes fadeIn {
@@ -19,12 +24,13 @@
 
 @keyframes draw-hexagon {
     from {
-      stroke-dashoffset: 400;
+      stroke-dashoffset: 420;
     }
     to {
-        stroke-dashoffset: 0;
+      stroke-dashoffset: 0;
     }
   }
+
 
 @keyframes collapseAndFade {
 to {

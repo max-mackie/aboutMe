@@ -4,25 +4,41 @@ import Image from "next/image";
 import Loading from "../Loading/Loading";
 import Navbar from "../Navbar/Navbar";
 import Icons from "../Icons/Icons";
+import Email from "../Email/Email";
 import "./Content.css";
 
 export default function Home() {
+  const [pageLoaded, setPageLoaded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2100);
+    const handleLoad = () => {
+      setPageLoaded(true);
+      console.log("loaded");
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 3000);
 
     return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {
-    return <Loading />;
+    return <div>{pageLoaded && <Loading />}</div>;
   }
 
   return (
     <main className="bg-navy flex flex-col">
       <Navbar />
-      <h1 className="text-white p-32">Max Mackie</h1>
+      <h1 className="text-white p-32 ">Max Mackie</h1>
       <h3 className="text-white m-32">I build things for the web</h3>
       <p className="text-white m-32">
         I’m a software engineer specializing in building (and occasionally
@@ -30,6 +46,7 @@ export default function Home() {
         building accessible, human-centered products at Upstatement.
       </p>
       <Icons />
+      <Email />
     </main>
   );
 }

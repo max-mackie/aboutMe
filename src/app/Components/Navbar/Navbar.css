@@ -1,3 +1,37 @@
 .hidden {
     transform: translateY(-100%);
+}
+
+@keyframes fadeInDropDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.logo {
+  animation: pulse 2s forwards;
+}
+
+.fadeInDropDown{
+  transform: translateY(-20px);
+  animation: fadeInDropDown 0.6 ease 0.5s forwards;
+}
+
+.hoverEffect {
+  transition: transform 0.3s ease
+}
+
+.hoverEffect:hover {
+  transform: translateY(-5px) translateX(-5px);
+}
