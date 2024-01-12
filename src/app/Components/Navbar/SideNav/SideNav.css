@@ -1,0 +1,13 @@
+#sideBarNavLinks span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#sidebarResumeButton {
+    background: #112240;
+}
+
+#sideBarNavLinks  .link {
+    margin: 0
+} 

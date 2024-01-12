@@ -27,8 +27,6 @@ module.exports = {
         'green-tint': 'rgba(100,255,218,0.1)',
         'pink': '#f57dff',
         'blue': '#57cbff',
-        'lightest-slate': '#ccd6f6',
-        'green': '#64ffda',
       },
       fontFamily: {
         'nav-font': ['"SF Mono"', '"Fira Code"', '"Fira Mono"', '"Roboto Mono"', 'monospace']

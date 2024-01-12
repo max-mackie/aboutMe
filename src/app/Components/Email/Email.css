@@ -1,5 +1,5 @@
-li {
-    color: #ccd6f6;
+.writing-mode-vertical {
+    writing-mode: vertical-lr;
 }
 
 @media (max-width: 767px) { /* Tailwind's 'md' breakpoint is 768px by default */

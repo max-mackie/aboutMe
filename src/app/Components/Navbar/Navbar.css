@@ -1,7 +1,9 @@
+/* Hide navbar on scroll */
 .hidden {
     transform: translateY(-100%);
 }
 
+/* animation for links loading */
 @keyframes fadeInDropDown {
   from {
     opacity: 0;
@@ -13,25 +15,108 @@
   }
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-.logo {
-  animation: pulse 2s forwards;
-}
-
-.fadeInDropDown{
+.childrenFadeIn > .dd100{
+  opacity: 0;
   transform: translateY(-20px);
-  animation: fadeInDropDown 0.6 ease 0.5s forwards;
+  animation: fadeInDropDown 0.6s ease 0.1s forwards;
+}
+.childrenFadeIn > .dd200{
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDropDown 0.6s ease 0.2s forwards;
+}
+.childrenFadeIn > .dd300{
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDropDown 0.6s ease 0.3s forwards;
+}
+.childrenFadeIn > .dd400{
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDropDown 0.6s ease 0.4s forwards;
+}
+.dd500{
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDropDown 0.6s ease 0.5s forwards;
 }
 
+/* animation for when links are hovered over */
 .hoverEffect {
-  transition: transform 0.3s ease
+  transition: transform 0.3s ease;
 }
 
 .hoverEffect:hover {
   transform: translateY(-5px) translateX(-5px);
 }
+
+/* Responsive design */
+@media (min-width: 768px) { /* Tailwind's 'md' breakpoint is 768px by default */
+  .responsive-show {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) { /* Tailwind's 'md' breakpoint is 768px by default */
+  .responsive-hidden {
+    display: none;
+  }
+}
+
+/* Hamburger Menu annimations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes spin-back {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+.spin {
+  animation: spin 0.5s ease-out;
+}
+
+.spin-back {
+  animation: spin-back 0.1s linear
+}
+
+@keyframes collapseIcon {
+  from {
+    transform: scaleY(1);
+  }to{
+    transform: scaleY(0);
+  }
+}
+
+@keyframes uncollapseIcon {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.collapseIcon {
+  animation: collapseIcon 0.2s linear;
+}
+
+.uncollapseIcon {
+  animation: uncollapseIcon 0.2s linear;
+}
+
+/* Sliding menu styling */
+.menu{
+  transition: right 1.5s ease;
+}
+
