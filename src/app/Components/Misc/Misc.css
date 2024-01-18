@@ -1,0 +1,32 @@
+@keyframes slideInFromRight{
+    from{
+        width:0;
+        left:100%;
+    }
+    to{
+        width:100%;
+        left:0%;
+    }
+}
+
+.animated-underline{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.animated-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    width: 0; /* Start with no width */
+    height: 10px;
+    color: #64ffda;
+    background: #64ffda;
+    transition: width 0.5s ease; /* Transition for the width */
+  }
+  
+  .animated-underline:hover::after {
+    width: 100%; /* Full width on hover */
+  }

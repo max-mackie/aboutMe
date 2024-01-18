@@ -57,9 +57,12 @@ const AboutMe = () => {
               className="rounded relative z-10 hover-up" //need to make sure nav bar is higher than this
               src="/IMG_8324 (1).PNG" // Make sure the file name is URL-friendly
               alt="Photo of Max"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
               width={200}
               height={200}
-              layout="responsive"
             />
             <div className="bg-green top-0 absolute w-full h-full rounded z-20 opacity-30 hover-hidden"></div>
             <div className=" border border-green absolute ml-5 mt-5 top-0 w-full h-full rounded hover-down"></div>
