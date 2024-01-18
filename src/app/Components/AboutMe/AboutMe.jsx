@@ -4,13 +4,13 @@ import "./AboutMe.css";
 
 const AboutMe = () => {
   return (
-    <section className="text-slate mt-96 ml-20 md:ml-36 mr-10 flex flex-wrap">
+    <section className="text-slate mt-96 mx-10 flex flex-col">
       <h2 className="flex items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">01.</span>
         About Me
-        <span className="flex-grow bg-dark-slate h-[1px] mx-2 mr-16"></span>
+        <span className="flex-grow bg-dark-slate h-[2px] mx-2 mr-16"></span>
       </h2>
-      <div className="flex flex-col md:flex-row md:items-center">
+      <div className="flex flex-col lg:flex-row md:items-center">
         <div>
           <p className="mt-6 ">
             Hello! My name is Max and I enjoy things that live on the internet.
@@ -51,7 +51,7 @@ const AboutMe = () => {
             </li>
           </ul>
         </div>
-        <div className="flex items-center justify-center w-full h-full mr-20">
+        <div className="flex items-center justify-center w-full h-full pr-10">
           <div className="basis-4/5 max-h-[300px] max-w-[300px] relative">
             <Image
               className="rounded relative z-10 hover-up" //need to make sure nav bar is higher than this

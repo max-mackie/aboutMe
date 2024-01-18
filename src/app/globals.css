@@ -13,5 +13,7 @@
 }
 
 body {
+  overflow-x: hidden;
   padding: 0px;
+  box-sizing: border-box;
 }

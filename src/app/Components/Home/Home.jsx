@@ -40,16 +40,22 @@ export default function Home() {
 
   return (
     <>
-      <Icons />
-      <Email />
-      <main className="bg-navy min-h-screen flex flex-col flex-wrap">
-        <Navbar />
-        <Intro />
-        <AboutMe />
-        <Work />
-        <Projects />
-        <Contact />
-      </main>
+      <div className="bg-navy min-h-screen min-w-screen flex flex-col flex-wrap">
+        <aside>
+          <Icons />
+          <Email />
+        </aside>
+        <nav>
+          <Navbar />
+        </nav>
+        <main className="px-10 md:px-24">
+          <Intro />
+          <AboutMe />
+          <Work />
+          <Projects />
+          <Contact />
+        </main>
+      </div>
     </>
   );
 }

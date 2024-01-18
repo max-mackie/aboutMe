@@ -20,17 +20,17 @@ const Work = () => {
     });
   };
   return (
-    <section className="text-slate mt-24 ml-20 md:ml-36 mr-10 relative">
+    <section className="text-slate mt-24 mx-10 mr-10 flex flex-col relative">
       <h2 className="flex items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">02.</span>
         Where I've Worked
-        <span className="flex-grow bg-dark-slate h-[1px] mx-2 mr-16"></span>
+        <span className="flex-grow bg-dark-slate h-[1px] mx-2 "></span>
       </h2>
-      <div className="flex flex-col md:flex-row md:items-start space-x-4 mt-4 ">
+      <div className="flex flex-col md:flex-row md:items-start  mt-4">
         <div className="relative">
           <div className="absolute bg-dark-slate w-[2px] h-full" />
           <div className=" absolute bg-green w-[2px]" style={highlightStyle} />
-          <div ref={buttonsRef} className="flex md:flex-col ">
+          <div ref={buttonsRef} className="flex md:flex-col flex-wrap">
             {jobData.map((data, index) => (
               <button
                 key={index}
