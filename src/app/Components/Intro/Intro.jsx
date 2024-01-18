@@ -2,7 +2,7 @@ import React from "react";
 
 const Intro = () => {
   return (
-    <section className="text-slate mt-56 ml-20 md:ml-36 mr-10">
+    <section className="text-slate mt-56  mx-10 w-auto">
       <h5 className="text-green my-5">Hi, my name is</h5>
       <h1 className="text-4xl sm:text-5xl md:text-6xl my-2 font-bold text-lightest-slate">
         Max Mackie
