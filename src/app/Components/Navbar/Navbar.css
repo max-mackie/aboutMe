@@ -84,6 +84,7 @@
 
 .spin {
   animation: spin 0.5s ease-out;
+
 }
 
 .spin-back {
@@ -114,9 +115,3 @@
 .uncollapseIcon {
   animation: uncollapseIcon 0.2s linear;
 }
-
-/* Sliding menu styling */
-.menu{
-  transition: right 1.5s ease;
-}
-

@@ -72,24 +72,30 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="flex flex-col">
+    <nav className="flex flex-col ">
       <section
-        className={`w-full flex items-center justify-between pl-10 pr-12 pt-10 pb-4 bg-navy text-lightest-slate font-nav-font bg-opacity-70 fixed transition-transform duration-300 tranform-gpu ${
+        //  backdrop-blur-md want to put this in but it ruins the sideNav
+        className={`w-full flex items-center justify-between pl-10 pr-12 pt-10 pb-4 bg-navy text-lightest-slate font-nav-font bg-opacity-70 fixed z-20 transition-transform duration-300 tranform-gpu ${
           hide ? "-translate-y-full" : ""
         }`}
       >
         <NavbarLogo animationFinished={animationFinished} />
-        <div className="responsive-hidden flex childrenFadeIn">
+        <div className="responsive-hidden flex childrenFadeIn ">
           <NavLinks animationFinished={animationFinished} />
         </div>
-        {isOpen && <SideNav isOpen={isOpen} toggleNavbar={toggleNavbar} />}
+        {/* {isOpen && <SideNav isOpen={isOpen} toggleNavbar={toggleNavbar} />} */}
+        <SideNav isOpen={isOpen} toggleNavbar={toggleNavbar} />
         <div className="responsive-show text-green">
           <button id="navControl" onClick={toggleNavbar}>
             {isOpen ? (
-              <X className={`${isClosing ? "spin-back" : "spin"} z-50`} />
+              <X
+                className={`${isClosing ? "spin-back" : "spin"} relative z-50`}
+              />
             ) : (
               <Menu
-                className={`${isClosing ? "uncollapseIcon" : "collapseIcon"}`}
+                className={`${
+                  isClosing && !isOpen ? "uncollapseIcon" : "collapseIcon"
+                }`}
               />
             )}
           </button>

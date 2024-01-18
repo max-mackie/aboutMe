@@ -1,0 +1,13 @@
+.hover-up:hover {
+    transform: translate(-10px, -10px);
+    transition: transform 0.3s;
+}
+
+.hover-down:hover {
+    transform: translate(10px, 10px);
+    transition: transform 0.3s;
+}
+
+.hover-hidden:hover{
+    opacity: 0;
+}

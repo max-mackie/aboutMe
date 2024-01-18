@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import NavLinks from "../NavLinks/NavLinks";
 import "./SideNav.css";
 
@@ -13,7 +13,7 @@ const SideNav = ({ isOpen, toggleNavbar }) => {
       )}
       <div
         id="sideBarNavLinks"
-        className={` flex text-center flex-col items-center justify-around pt-10 pb-10 fixed top-0 right-0 w-80 h-full text-lightest-slate bg-light-navy p-5 transform transition-transform ${
+        className={` sidebar-transition flex text-center flex-col items-center justify-around pt-20 pb-10 fixed top-0 right-0 w-80 h-full text-lightest-slate bg-light-navy p-5 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } `}
       >

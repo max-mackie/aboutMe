@@ -1,12 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import Loading from "../Loading/Loading";
 import Navbar from "../Navbar/Navbar";
+import Intro from "../Intro/Intro";
+import AboutMe from "../AboutMe/AboutMe";
+import Work from "../Work/Work";
+import Projects from "../Projects/Projects";
+import Contact from "../Contact/Contact";
 import Icons from "../Icons/Icons";
 import Email from "../Email/Email";
 
-export default function Content() {
+export default function Home() {
   const [pageLoaded, setPageLoaded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -38,15 +42,13 @@ export default function Content() {
     <>
       <Icons />
       <Email />
-      <main className="bg-navy flex flex-col flex-wrap">
+      <main className="bg-navy min-h-screen flex flex-col flex-wrap">
         <Navbar />
-        <h1 className="text-white p-32 ">Max Mackie</h1>
-        <h3 className="text-white m-32">I build things for the web</h3>
-        <p className="text-white m-32">
-          I’m a software engineer specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, I’m focused on
-          building accessible, human-centered products at Upstatement.
-        </p>
+        <Intro />
+        <AboutMe />
+        <Work />
+        <Projects />
+        <Contact />
       </main>
     </>
   );

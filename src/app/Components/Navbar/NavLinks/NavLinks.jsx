@@ -32,7 +32,7 @@ const NavLinks = ({ animationFinished }) => {
           }`}
         >
           <Link
-            id="sidebarResumeButton"
+            id="resumeButton"
             className={`relative z-10 text-green bg-navy rounded px-4 py-2 m-2 border border-1 border-green`}
             href="/resume.pdf"
           >
