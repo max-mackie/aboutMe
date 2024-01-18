@@ -3,7 +3,7 @@ import AnimatedLink from "../../Misc/AnimatedLink";
 
 const Job = ({ props }) => {
   return (
-    <section>
+    <section className="mr-20">
       <h3 className="text-xl font-bold mt-1 flex items-start">
         {props.role}
         {props.url && (
@@ -15,19 +15,28 @@ const Job = ({ props }) => {
           </div>
         )}
       </h3>
-      <p className="mt-1 mb-4">
+      <p className={`mb-4 ${!props.url && "mt-1"}`}>
         {props.start} - {props.end}
       </p>
       <ul>
-        {props.bullets.map((bullet, index) => (
-          <div key={index + "a"} className="flex my-4">
-            <p
-              key={index + "b"}
-              className="text-green  mr-4 before:content-['▸_']"
-            ></p>
-            <li className="text-slate" key={index + "c"}>
-              {bullet}
-            </li>
+        {Object.entries(props.bullets).map(([title, bullets], index) => (
+          <div>
+            {title && (
+              <h5 key={title} className="font-bold text-lg">
+                {title}
+              </h5>
+            )}
+            {bullets.map((bullet) => (
+              <div
+                key={index}
+                className={`flex my-4 ${title ? "my-1" : "my-4"}`}
+              >
+                <p className="text-green  mr-4 before:content-['▸_']"></p>
+                <li className="text-slate" key={index + "c"}>
+                  {bullet}
+                </li>
+              </div>
+            ))}
           </div>
         ))}
       </ul>
