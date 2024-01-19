@@ -27,10 +27,10 @@ const Work = () => {
         <span className="flex-grow bg-dark-slate h-[1px] mx-2 "></span>
       </h2>
       <div className="flex flex-col md:flex-row md:items-start  mt-4">
-        <div className="relative">
+        <div className=" mb-10 md:mb-0 relative">
           <div className="absolute bg-dark-slate w-[2px] h-full" />
           <div className=" absolute bg-green w-[2px]" style={highlightStyle} />
-          <div ref={buttonsRef} className="flex md:flex-col flex-wrap">
+          <div ref={buttonsRef} className="flex md:flex-col">
             {jobData.map((data, index) => (
               <button
                 key={index}
