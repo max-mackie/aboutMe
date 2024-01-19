@@ -1,3 +1,3 @@
 * make horizontal lines at titles go below the title on smaller screens
 * make the background of the navbar blur content behind it
-* Fix my image so that all the parts move at once
+* Fix horezontal scroll bar
