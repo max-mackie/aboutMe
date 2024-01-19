@@ -52,7 +52,7 @@ const AboutMe = () => {
           </ul>
         </div>
         <div className="flex items-center justify-center w-full h-full pr-10">
-          <div className="basis-4/5 max-h-[300px] max-w-[300px] relative">
+          <div className="basis-4/5 max-h-[300px] max-w-[300px] relative animation-container">
             <Image
               className="rounded relative z-10 hover-up" //need to make sure nav bar is higher than this
               src="/IMG_8324 (1).PNG" // Make sure the file name is URL-friendly
