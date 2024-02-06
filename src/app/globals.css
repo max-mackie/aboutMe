@@ -29,3 +29,7 @@ body {
   background: #495670; /* color of the scrollbar thumb */
   border-radius: 5px; /* roundness of the scrollbar thumb */
 }
+
+.left-40 {
+  left: 40%;
+}

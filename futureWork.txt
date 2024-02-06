@@ -4,3 +4,5 @@
 * add button highlighting bar to horizontal scroll feat
 * fix button highlighting so full height is light up
 * make horezontal scroll bar thinner
+* sort projects responsive changes
+* make sure navbar goes over projects
