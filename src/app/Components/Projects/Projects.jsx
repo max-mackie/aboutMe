@@ -1,17 +1,17 @@
 import React from "react";
 import Image from "next/image";
-// import "../../../../public/IMG_0562"
+import "./Projects.css";
 
 const Projects = () => {
   return (
-    <section className="text-slate mt-48 mx-10">
-      <h2 className="flex items-center font-bold text-2xl text-lightest-slate">
+    <section className=" flex flex-col text-slate mt-48 mx-10">
+      <h2 className="flex items-center font-bold text-2xl text-lightest-slate mb-16">
         <span className="text-lg font-normal text-green mr-4">03.</span>
         Some Things I've Built
         <span className="flex-grow bg-dark-slate h-[1px] mx-2 mr-16"></span>
       </h2>
-      <div className="flex justify-center justify-center items-center mt-20">
-        <div className="relative w-full max-w-7xl flex justify-between items-center responsive-hidden">
+      <div className="flex justify-center justify-center items-center mt-20 responsive-hide">
+        <div className="relative w-full max-w-7xl flex justify-between items-center">
           <div className="w-2/3 xl:w-1/2 z-10">
             <Image
               className="rounded " //need to make sure nav bar is higher than this
@@ -47,7 +47,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className=" relative responsive-show bg-[url('/IMG_0562.jpg')] bg-contain bg-center bg-no-repeat py-10 px-5">
+      <div className=" relative bg-[url('/IMG_0562.jpg')] bg-contain bg-center bg-no-repeat py-10 px-5 responsive-showen">
         <div className="absolute inset-0 bg-dark-navy bg-opacity-90 w-full h-auto"></div>
         <div className="relative z-10 text-lightest-slate text-right">
           <h5 className="text-green pb-2">Featured Project</h5>
