@@ -19,10 +19,7 @@ const NavLinks = ({ animationFinished }) => {
       </Link>
       <div className="flex relative">
         {animationFinished && (
-          <div
-            className="absolute inset-0 bg-green h-[1.9rem] mx-2 px-4 rounded z-0 transition-opacity duration-200"
-            style={{}}
-          ></div>
+          <div className="absolute inset-0 bg-green h-[1.9rem] mx-2 px-4 rounded z-0 transition-opacity duration-200"></div>
         )}
         <button
           className={`${

@@ -17,3 +17,19 @@ body {
   padding: 0px;
   box-sizing: border-box;
 }
+
+/* This part styles the scrollbar track */
+::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+  background: #0a192f;
+}
+
+/* This part styles the scrollbar thumb (the part you drag) */
+::-webkit-scrollbar-thumb {
+  background: #495670; /* color of the scrollbar thumb */
+  border-radius: 5px; /* roundness of the scrollbar thumb */
+}
+
+.left-40 {
+  left: 40%;
+}

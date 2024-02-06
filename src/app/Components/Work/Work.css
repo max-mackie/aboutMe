@@ -1,0 +1,33 @@
+.my-responsive-width {
+    max-width: 360px; /* Default max-width for small screens */
+  }
+
+  @media (min-width: 600px) {
+    .my-responsive-width {
+      max-width: 430px; /* Full width for screens larger than 768px */
+    }
+  }
+
+  @media (min-width: 650px) {
+    .my-responsive-width {
+      max-width: 480px; /* Full width for screens larger than 768px */
+    }
+  }
+
+  @media (min-width: 700px) {
+    .my-responsive-width {
+      max-width: 530px; /* Full width for screens larger than 768px */
+    }
+  }
+
+  @media (min-width: 750px) {
+    .my-responsive-width {
+      max-width: 580px; /* Full width for screens larger than 768px */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .my-responsive-width {
+      max-width: 100%; /* Full width for screens larger than 768px */
+    }
+  }
