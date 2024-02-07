@@ -20,7 +20,7 @@ const Job = ({ props }) => {
       </p>
       <ul>
         {Object.entries(props.bullets).map(([title, bullets], index) => (
-          <div>
+          <div key={title}>
             {title && (
               <h5 key={title} className="font-bold text-lg">
                 {title}

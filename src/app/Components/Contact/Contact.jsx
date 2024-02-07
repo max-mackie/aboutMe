@@ -6,13 +6,13 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Contact = () => {
   return (
     <section className="flex flex-col text-slate mt-48 mx-10 items-center">
-      <h3 className="text-xl font-normal text-green">04. What's Next?</h3>
+      <h3 className="text-xl font-normal text-green">04. What&apos;s Next?</h3>
       <h2 className="flex items-center font-bold text-5xl text-lightest-slate my-5">
         Get In Touch
       </h2>
       <p className="max-w-[700px] text-lg text-center mb-10">
         My inbox is always open. Whether you have a question or just want to say
-        hi, I'll try my best to get back to you!
+        hi, I&apos;ll try my best to get back to you!
       </p>
       <div className="flex relative">
         <div className="absolute inset-0 bg-green h-[3.9rem] m-2 px-8 rounded z-0 transition-opacity duration-200"></div>
