@@ -27,15 +27,20 @@ jobs:
 
     - name: Print Public IP
       run: |
-        echo ${{steps.ip.outputs.ipv4}}
+        echo "runner IP is ${{steps.ip.outputs.ipv4}}"
 
     - name: Whitelist runner IP address in the Security Group
       run: |
-        aws ec2 authorise-security-group-ingress \
+        aws ec2 authorize-security-group-ingress \
           --group-id ${{ secrets.AWS_INSTANCE_SG_ID }} \
           --protocol tcp \
           --port 22 \
           --cidr ${{ steps.ip.outputs.ipv4 }}/32
+
+    - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.5.1
+      with:
+        ssh-private-key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
     
     - name: SSH into EC2 and deploy the application
       run: |
@@ -55,26 +60,3 @@ jobs:
           --protocol tcp \
           --port 22 \
           --cidr ${{ steps.ip.outputs.ipv4 }}/32
-          
-    # - name: Copy repository contents to the EC2 instance
-    #   uses: appleboy/scp-action@master
-    #   with:
-    #     host: ${{ secrets.EC2_HOST }}
-    #     username: ${{ secrets.EC2_USERNAME}}
-    #     key: ${{ secrets.EC2_SSH_KEY}}
-    #     port: 22
-    #     source: "."
-    #     target: "/path/to/your/next-app"  # The directory on your EC2 instance where you want to copy your repo.
-
-    # - name: Install dependencies, build and restart the server
-    #   uses: appleboy/ssh-action@master
-    #   with: 
-    #     host: ${{ secrets.EC2_HOST }}
-    #     username: ${{ secrets.EC2_USERNAME}}
-    #     key: ${{ secrets.EC2_SSH_KEY}}
-    #     port: 22
-    #     script: |
-    #       cd /path/to/your/next-app # find the path like above
-    #       npm install
-    #       npm run build
-    #       pm2 restart all
