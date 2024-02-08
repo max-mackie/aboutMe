@@ -36,7 +36,7 @@ jobs:
     - name: SSH into EC2 and deploy the application
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} << 'ENDSSH'
-        cd /path/to/your/next-app
+        cd /apps/aboutMe
         git pull origin main
         npm install --production
         npm run build
