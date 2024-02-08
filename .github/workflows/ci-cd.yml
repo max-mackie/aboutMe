@@ -43,13 +43,9 @@ jobs:
     - name: SSH into EC2 and deploy the application
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} << 'ENDSSH'
-        pwd
-        ls
         cd /home/ubuntu/apps/aboutMe
-        pwd
-        ls -la
         git pull origin main
-        npm install --production
+        npm install
         npm run build
         pm2 restart all
         ENDSSH
