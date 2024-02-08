@@ -44,8 +44,8 @@ jobs:
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} << 'ENDSSH'
         pwd
-        ls -la
-        cd /apps/aboutMe
+        ls
+        cd /home/ubuntu/apps/aboutMe
         pwd
         ls -la
         git pull origin main
