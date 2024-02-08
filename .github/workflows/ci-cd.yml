@@ -22,12 +22,10 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Get runner IP address
-      id: ip
-      uses: haythem/public-ip@v1.3
+      run: echo "RUNNER_IP=$(curl -s https://api.ipify.org)" >> $GITHUB_ENV
 
     - name: Print Public IP
-      run: |
-        echo "runner IP is ${{steps.ip.outputs.ipv4}}"
+      run: echo "Runner IP is $RUNNER_IP"
 
     - name: Whitelist runner IP address in the Security Group
       run: |
@@ -35,7 +33,7 @@ jobs:
           --group-id ${{ secrets.AWS_INSTANCE_SG_ID }} \
           --protocol tcp \
           --port 22 \
-          --cidr ${{ steps.ip.outputs.ipv4 }}/32
+          --cidr $RUNNER_IP/32
 
     - name: Setup SSH
       uses: webfactory/ssh-agent@v0.5.1
@@ -59,4 +57,4 @@ jobs:
           --group-id ${{ secrets.AWS_INSTANCE_SG_ID }} \
           --protocol tcp \
           --port 22 \
-          --cidr ${{ steps.ip.outputs.ipv4 }}/32
+          --cidr $RUNNER_IP/32
