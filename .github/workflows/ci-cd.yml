@@ -25,7 +25,7 @@ jobs:
       run: echo "RUNNER_IP=$(curl -s https://api.ipify.org)" >> $GITHUB_ENV
 
     - name: Print Public IP
-      run: echo "Runner IP is $RUNNER_IP"
+      run: echo "Runner IP is: $RUNNER_IP"
 
     - name: Whitelist runner IP address in the Security Group
       run: |
