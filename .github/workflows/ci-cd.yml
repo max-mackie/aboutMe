@@ -37,11 +37,11 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION }}
 
-    # - name: Get runner IP address
-    #   run: echo "RUNNER_IP=$(curl -s https://api.ipify.org)" >> $GITHUB_ENV
+    - name: Get runner IP address
+      run: echo "RUNNER_IP=$(curl -s https://api.ipify.org)" >> $GITHUB_ENV
 
-    # - name: Print Public IP
-    #   run: echo "Runner IP is $RUNNER_IP"
+    - name: Print Public IP
+      run: echo "Runner IP is $RUNNER_IP"
 
     - name: Whitelist runner IP address in the Security Group
       run: |
