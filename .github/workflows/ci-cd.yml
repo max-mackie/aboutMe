@@ -14,6 +14,22 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
+    - name: Cache node modules
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/packages-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    # Optional: Add steps for selective deployment based on changed files
+
+    - name: Run linters
+      run: npm run lint
+
+    - name: Run tests
+      run: npm test
+      
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
@@ -21,11 +37,11 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION }}
 
-    - name: Get runner IP address
-      run: echo "RUNNER_IP=$(curl -s https://api.ipify.org)" >> $GITHUB_ENV
+    # - name: Get runner IP address
+    #   run: echo "RUNNER_IP=$(curl -s https://api.ipify.org)" >> $GITHUB_ENV
 
-    - name: Print Public IP
-      run: echo "Runner IP is $RUNNER_IP"
+    # - name: Print Public IP
+    #   run: echo "Runner IP is $RUNNER_IP"
 
     - name: Whitelist runner IP address in the Security Group
       run: |
@@ -50,6 +66,22 @@ jobs:
         pm2 restart all
         ENDSSH
 
+    # - name: Send deployment success email
+    #   if: success()
+    #   uses: dawidd6/action-send-mail@v3
+    #   with:
+    #     server_address: ${{ secrets.SMTP_HOST }}
+    #     server_port: ${{ secrets.SMTP_PORT }}
+    #     username: ${{ secrets.EMAIL_USERNAME }}
+    #     password: ${{ secrets.EMAIL_PASSWORD }}
+    #     subject: Deployment Succeeded
+    #     # Customize the body as needed
+    #     body: The deployment to EC2 has been successfully completed.
+    #     to: mprmackie@gmail.com
+    #     from: GitHub Actions <${{ secrets.EMAIL_USERNAME }}>
+    #     # Use TLS for Gmail
+    #     secure: true
+        
     - name: Revoke runner IP address from the Security Group
       if: always()
       run: |
