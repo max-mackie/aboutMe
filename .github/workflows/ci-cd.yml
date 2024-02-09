@@ -65,22 +65,6 @@ jobs:
         npm run build
         pm2 restart all
         ENDSSH
-
-    # - name: Send deployment success email
-    #   if: success()
-    #   uses: dawidd6/action-send-mail@v3
-    #   with:
-    #     server_address: ${{ secrets.SMTP_HOST }}
-    #     server_port: ${{ secrets.SMTP_PORT }}
-    #     username: ${{ secrets.EMAIL_USERNAME }}
-    #     password: ${{ secrets.EMAIL_PASSWORD }}
-    #     subject: Deployment Succeeded
-    #     # Customize the body as needed
-    #     body: The deployment to EC2 has been successfully completed.
-    #     to: mprmackie@gmail.com
-    #     from: GitHub Actions <${{ secrets.EMAIL_USERNAME }}>
-    #     # Use TLS for Gmail
-    #     secure: true
         
     - name: Revoke runner IP address from the Security Group
       if: always()
