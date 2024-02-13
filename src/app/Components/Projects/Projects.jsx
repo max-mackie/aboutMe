@@ -4,8 +4,8 @@ import "./Projects.css";
 
 const Projects = () => {
   return (
-    <section className=" flex flex-col text-slate mt-48 mx-10">
-      <h2 className="flex items-center font-bold text-2xl text-lightest-slate mb-16">
+    <section id="projects" className="flex flex-col text-slate mt-48 mx-10">
+      <h2 className="flex items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">03.</span>
         Some Things I&apos;ve Built
         <span className="flex-grow bg-dark-slate h-[1px] mx-2 mr-16"></span>
