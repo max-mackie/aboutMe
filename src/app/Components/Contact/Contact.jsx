@@ -9,7 +9,7 @@ const Contact = () => {
       id="contact"
       className="flex flex-col text-slate mt-48 mx-10 items-center"
     >
-      <h3 className="text-xl font-normal text-green">04. What's Next?</h3>
+      <h3 className="text-xl font-normal text-green">04. What&apos;s Next?</h3>
       <h2 className="flex items-center font-bold text-5xl text-lightest-slate my-5">
         Get In Touch
       </h2>
