@@ -16,20 +16,38 @@ const Contact = () => {
       </p>
       <div className="flex relative">
         <div className="absolute inset-0 bg-green h-[3.9rem] m-2 px-8 rounded z-0 transition-opacity duration-200"></div>
-        <button className="relative z-10 text-lg text-green bg-navy rounded px-8 py-4 m-2 border border-1 border-green hoverEffect">
-          Say Hello
-        </button>
+        <a
+          href="mailto:mprmackie@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="relative z-10 text-lg text-green bg-navy rounded px-8 py-4 m-2 border border-1 border-green hoverEffect">
+            Say Hello
+          </button>
+        </a>
       </div>
       <div className=" flex items-center flex-col mt-56">
         <div className=" space-y-4 text-2xl text-lightest-slate responsive-show">
-          <FontAwesomeIcon
-            className="mt-4 mr-2 hover:-translate-y-1 pb-2 hover:text-green transition-all duration-150"
-            icon={faLinkedin}
-          />
-          <FontAwesomeIcon
-            className="ml-2 hover:-translate-y-1 pb-2 hover:text-green transition-all duration-150"
-            icon={faGithub}
-          />
+          <a
+            href="https://www.linkedin.com/in/max-mackie/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              className="mt-4 mr-2 hover:-translate-y-1 pb-2 hover:text-green transition-all duration-150"
+              icon={faLinkedin}
+            />
+          </a>
+          <a
+            href="https://github.com/max-mackie"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              className="ml-2 hover:-translate-y-1 pb-2 hover:text-green transition-all duration-150"
+              icon={faGithub}
+            />
+          </a>
         </div>
         <footer className="mb-10 mt-4">Designed and Built by Max Mackie</footer>
       </div>
