@@ -9,6 +9,8 @@ const Email = () => {
         <div className="writing-mode-vertical hover:-translate-y-1 transition-all duration-150 ml-1 mb-4">
           <a
             href="mailto:mprmackie@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className=" p-2 hover:text-green text-xs"
           >
             mprmackie@gmail.com
