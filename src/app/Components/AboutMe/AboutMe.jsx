@@ -28,7 +28,7 @@ const AboutMe = () => {
             for XXX and XXX
           </p>
           <p className="mt-4">
-            Here are a few technologies I've been working with recently:
+            Here are a few technologies I&apos;ve been working with recently:
           </p>
           <ul className="list-none pt-5  columns-2 space-y-2 mb-10">
             <li className=" text-slate before:content-['▸_'] before:text-green before:pr-2">

@@ -11,7 +11,7 @@ const Intro = () => {
         I build thigs for the web.
       </h3>
       <p className="mt-6 md:w-2/3 ">
-        I'm a software engineer specialising in building (and occasionally
+        I&apos;m a software engineer specialising in building (and occasionally
         designing) exceptional digital experiences. Currently, Im looking to for
         a new role where I can continue developing my skills and contribute to a
         team that shares my excitement for technology and innovation.

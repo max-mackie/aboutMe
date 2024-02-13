@@ -35,7 +35,7 @@ const Work = () => {
     >
       <h2 className="flex items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">02.</span>
-        Where I've Worked
+        Where I&apos;ve Worked
         <span className="flex-grow bg-dark-slate h-[1px] mx-2 "></span>
       </h2>
       <div className="flex flex-col md:flex-row md:items-start mt-4">

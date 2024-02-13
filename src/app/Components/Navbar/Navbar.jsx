@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
 import NavbarLogo from "./NavbarLogo/NavbarLogo.jsx";
 import NavLinks from "./NavLinks/NavLinks";
@@ -8,17 +8,18 @@ import { Menu, X } from "lucide-react";
 
 const useHideOnScroll = () => {
   const [hide, setHide] = useState(false);
-  let lastScrollY = window.scrollY;
+  // let lastScrollY = window.scrollY;
+  let lastScrollY = useRef(window.scrollY);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY) {
+      if (currentScrollY > lastScrollY.current) {
         setHide(true);
       } else {
         setHide(false);
       }
-      lastScrollY = currentScrollY;
+      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,6 +28,7 @@ const useHideOnScroll = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return hide;
 };
 

@@ -15,7 +15,7 @@ const Contact = () => {
       </h2>
       <p className="max-w-[700px] text-lg text-center mb-10">
         My inbox is always open. Whether you have a question or just want to say
-        hi, I'll try my best to get back to you!
+        hi, I&apos;ll try my best to get back to you!
       </p>
       <div className="flex relative">
         <div className="absolute inset-0 bg-green h-[3.9rem] m-2 px-8 rounded z-0 transition-opacity duration-200"></div>

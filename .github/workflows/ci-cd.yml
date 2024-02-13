@@ -1,0 +1,76 @@
+name: CI/CD Workflow
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs: 
+  deploy:
+    name: Deploy to EC2
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Cache node modules
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    # Optional: Add steps for selective deployment based on changed files
+
+    # - name: Run linters
+    #   run: npm run lint
+
+    # - name: Run tests
+    #   run: npm test
+      
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+    - name: Get runner IP address
+      run: echo "RUNNER_IP=$(curl -s https://api.ipify.org)" >> $GITHUB_ENV
+
+    - name: Print Public IP
+      run: echo "Runner IP is $RUNNER_IP"
+
+    - name: Whitelist runner IP address in the Security Group
+      run: |
+        aws ec2 authorize-security-group-ingress \
+          --group-id ${{ secrets.AWS_INSTANCE_SG_ID }} \
+          --protocol tcp \
+          --port 22 \
+          --cidr $RUNNER_IP/32
+
+    - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
+    
+    - name: SSH into EC2 and deploy the application
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} << 'ENDSSH'
+        cd /home/ubuntu/apps/aboutMe
+        git pull origin main
+        npm install
+        npm run build
+        pm2 restart all
+        ENDSSH
+        
+    - name: Revoke runner IP address from the Security Group
+      if: always()
+      run: |
+        aws ec2 revoke-security-group-ingress \
+          --group-id ${{ secrets.AWS_INSTANCE_SG_ID }} \
+          --protocol tcp \
+          --port 22 \
+          --cidr $RUNNER_IP/32
