@@ -10,8 +10,8 @@ const NavLinks = ({ animationFinished }) => {
       <Link href="/#experience" className=" link mr-4 hover:text-green dd200">
         <span className="text-green mr-1">02.</span>Experience
       </Link>
-      <Link href="/#work" className="link mr-4 hover:text-green dd300">
-        <span className="text-green mr-1">03.</span>Work
+      <Link href="/#projects" className="link mr-4 hover:text-green dd300">
+        <span className="text-green mr-1">03.</span>Projects
       </Link>
 
       <Link href="/#contact" className="link mr-4 hover:text-green dd400">
@@ -28,13 +28,15 @@ const NavLinks = ({ animationFinished }) => {
               : "transition-all duration-200 dd500"
           }`}
         >
-          <Link
+          <a
             id="resumeButton"
-            className={`relative z-10 text-green bg-navy rounded px-4 py-2 m-2 border border-1 border-green`}
+            className="relative z-10 text-green bg-navy rounded px-4 py-2 m-2 border border-1 border-green"
             href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Resume
-          </Link>
+          </a>
         </button>
       </div>
     </>
