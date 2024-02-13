@@ -28,13 +28,15 @@ const NavLinks = ({ animationFinished }) => {
               : "transition-all duration-200 dd500"
           }`}
         >
-          <Link
+          <a
             id="resumeButton"
-            className={`relative z-10 text-green bg-navy rounded px-4 py-2 m-2 border border-1 border-green`}
+            className="relative z-10 text-green bg-navy rounded px-4 py-2 m-2 border border-1 border-green"
             href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Resume
-          </Link>
+          </a>
         </button>
       </div>
     </>
