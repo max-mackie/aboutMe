@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Projects = () => {
   return (
-    <section className="text-slate mt-48 mx-10">
+    <section id="projects" className="text-slate mt-48 mx-10">
       <h2 className="flex items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">03.</span>
         Some Things I've Built

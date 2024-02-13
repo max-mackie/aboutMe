@@ -4,7 +4,7 @@ import "./AboutMe.css";
 
 const AboutMe = () => {
   return (
-    <section className="text-slate mt-96 mx-10 flex flex-col">
+    <section id="about" className="text-slate mt-96 mx-10 flex flex-col">
       <h2 className="flex items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">01.</span>
         About Me

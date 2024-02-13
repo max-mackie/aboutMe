@@ -10,8 +10,8 @@ const NavLinks = ({ animationFinished }) => {
       <Link href="/#experience" className=" link mr-4 hover:text-green dd200">
         <span className="text-green mr-1">02.</span>Experience
       </Link>
-      <Link href="/#work" className="link mr-4 hover:text-green dd300">
-        <span className="text-green mr-1">03.</span>Work
+      <Link href="/#projects" className="link mr-4 hover:text-green dd300">
+        <span className="text-green mr-1">03.</span>Projects
       </Link>
 
       <Link href="/#contact" className="link mr-4 hover:text-green dd400">
