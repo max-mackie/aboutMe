@@ -4,11 +4,14 @@ import "./AboutMe.css";
 
 const AboutMe = () => {
   return (
-    <section id="about" className="text-slate mt-96 mx-10 flex flex-col">
+    <section
+      id="about"
+      className="text-slate mt-36 sm:mt-96 mx-10 flex flex-col"
+    >
       <h2 className="flex items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">01.</span>
         About Me
-        <span className="flex-grow bg-dark-slate h-[2px] mx-2 mr-16"></span>
+        <span className="hidden sm:flex flex-grow bg-dark-slate h-[2px] mx-2 mr-16"></span>
       </h2>
       <div className="flex flex-col lg:flex-row md:items-center">
         <div>
