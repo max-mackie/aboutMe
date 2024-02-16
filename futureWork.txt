@@ -7,3 +7,4 @@
 * sort projects responsive changes
 * make sure navbar goes over projects
 * break projects into components
+* fix horizontal scroll on less than 370px screens
