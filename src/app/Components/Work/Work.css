@@ -1,5 +1,27 @@
-.my-responsive-width {
-    max-width: 200px; /* Default max-width for small screens */
+#work_buttons::-webkit-scrollbar {
+  height: 8px; /* Or any other size to make it thinner */
+}
+
+#work_buttons::-webkit-scrollbar-track {
+  background: #0a192f;
+}
+
+#work_buttons::-webkit-scrollbar-thumb {
+  background: #0a192f;
+  border-radius: 10px;
+}
+
+#work_buttons::-webkit-scrollbar-thumb:hover {
+  background: #495670;
+}
+
+#work_buttons {
+  scrollbar-width: thin; /* 'auto', 'thin', or 'none' */
+  scrollbar-color: #495670 #0a192f; /* thumb and track color */
+}
+
+/* .my-responsive-width {
+    max-width: 200px; 
   }
 
   @media (min-width: 350px) {
@@ -60,4 +82,4 @@
     .my-responsive-width {
       max-width: 100%; 
     }
-  }
+  } */

@@ -1,20 +1,41 @@
 import React from "react";
 import Link from "next/link";
 
-const NavLinks = ({ animationFinished }) => {
+const NavLinks = ({ animationFinished, onNavLinkClick }) => {
+  const handleClick = (e) => {
+    if (onNavLinkClick) {
+      onNavLinkClick();
+    }
+  };
   return (
     <>
-      <Link href="/#about" className=" link mr-4 hover:text-green dd100">
+      <Link
+        href="/#about"
+        onClick={handleClick}
+        className=" link mr-4 hover:text-green dd100"
+      >
         <span className="text-green mr-1">01.</span>About
       </Link>
-      <Link href="/#experience" className=" link mr-4 hover:text-green dd200">
+      <Link
+        href="/#experience"
+        onClick={handleClick}
+        className=" link mr-4 hover:text-green dd200"
+      >
         <span className="text-green mr-1">02.</span>Experience
       </Link>
-      <Link href="/#projects" className="link mr-4 hover:text-green dd300">
+      <Link
+        href="/#projects"
+        onClick={handleClick}
+        className="link mr-4 hover:text-green dd300"
+      >
         <span className="text-green mr-1">03.</span>Projects
       </Link>
 
-      <Link href="/#contact" className="link mr-4 hover:text-green dd400">
+      <Link
+        href="/#contact"
+        onClick={handleClick}
+        className="link mr-4 hover:text-green dd400"
+      >
         <span className="text-green mr-1">04.</span>Contact
       </Link>
       <div className="flex relative">
@@ -34,6 +55,7 @@ const NavLinks = ({ animationFinished }) => {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleClick}
           >
             Resume
           </a>

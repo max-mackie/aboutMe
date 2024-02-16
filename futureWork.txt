@@ -1,10 +1,10 @@
 * make horizontal lines at titles go below the title on smaller screens
 * make the background of the navbar blur content behind it
-* Fix horezontal scroll bar
+* Fix horezontal scroll bar [done]
 * add button highlighting bar to horizontal scroll feat
 * fix button highlighting so full height is light up
-* make horezontal scroll bar thinner
-* sort projects responsive changes
+* make horezontal scroll bar thinner [done]
+* sort projects responsive changes 
 * make sure navbar goes over projects
 * break projects into components
-* fix horizontal scroll on less than 370px screens
+* fix horizontal scroll on less than 370px screens [done]

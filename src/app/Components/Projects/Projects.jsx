@@ -5,12 +5,12 @@ import "./Projects.css";
 const Projects = () => {
   return (
     <section id="projects" className="flex flex-col text-slate mt-48 mx-10">
-      <h2 className="flex items-center font-bold text-2xl text-lightest-slate">
+      <h2 className="sm:flex mb-10 whitespace-nowrap items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">03.</span>
         Some Things I&apos;ve Built
-        <span className="flex-grow bg-dark-slate h-[1px] mx-2 mr-16"></span>
+        <div className=" mt-2 sm:w-[100%] sm:flex-grow bg-dark-slate h-[1px] sm:mx-2 sm:mt-0 mr-16"></div>
       </h2>
-      <div className="flex justify-center justify-center items-center mt-20 responsive-hide">
+      <div className="flex justify-center justify-center items-center responsive-hide">
         <div className="relative w-full max-w-7xl flex justify-between items-center">
           <div className="w-2/3 xl:w-1/2 z-10">
             <Image
