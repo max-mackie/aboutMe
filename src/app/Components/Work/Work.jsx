@@ -33,13 +33,13 @@ const Work = () => {
       id="experience"
       className="text-slate mt-48 mx-10 mr-10 flex flex-col relative"
     >
-      <h2 className="flex items-center font-bold text-2xl text-lightest-slate">
+      <h2 className="sm:flex whitespace-nowrap items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">02.</span>
         Where I&apos;ve Worked
-        <span className="flex-grow bg-dark-slate h-[1px] mx-2 "></span>
+        <div className=" mt-2 sm:w-[100%] sm:flex-grow bg-dark-slate h-[1px] sm:mx-2 sm:mt-0 mr-16"></div>
       </h2>
       <div className="flex flex-col md:flex-row md:items-start mt-4">
-        <div className=" mb-10 md:mb-0 relative">
+        <div className=" mb-2 md:mb-0 relative">
           {isMobile || (
             <div className="absolute bg-dark-slate w-[2px] h-full" />
           )}
@@ -49,8 +49,9 @@ const Work = () => {
               style={highlightStyle}
             />
           )}
-          <div className="absolute my-responsive-width">
+          <div className="">
             <div
+              id="work_buttons"
               ref={buttonsRef}
               className="flex md:flex-col overflow-x-auto whitespace-nowrap"
             >

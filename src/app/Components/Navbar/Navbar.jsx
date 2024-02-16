@@ -39,7 +39,6 @@ const Navbar = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimationFinished(true);
-      console.log("animation finished");
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
@@ -74,10 +73,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="flex flex-col ">
+    <nav className="flex flex-col relative">
+      <SideNav isOpen={isOpen} toggleNavbar={toggleNavbar} />
       <section
         //  backdrop-blur-md want to put this in but it ruins the sideNav
-        className={`w-full flex items-center justify-between pl-10 pr-12 pt-10 pb-4 bg-navy text-lightest-slate font-nav-font bg-opacity-70 fixed z-20 transition-transform duration-300 tranform-gpu ${
+        className={`w-full backdrop-blur-md flex items-center justify-between pl-10 pr-12 pt-10 pb-4 bg-navy text-lightest-slate font-nav-font bg-opacity-70 fixed z-20 transition-transform duration-300 tranform-gpu backdropfilter ${
           hide ? "-translate-y-full" : ""
         }`}
       >
@@ -85,8 +85,6 @@ const Navbar = () => {
         <div className="responsive-hidden flex childrenFadeIn ">
           <NavLinks animationFinished={animationFinished} />
         </div>
-        {/* {isOpen && <SideNav isOpen={isOpen} toggleNavbar={toggleNavbar} />} */}
-        <SideNav isOpen={isOpen} toggleNavbar={toggleNavbar} />
         <div className="responsive-show text-green">
           <button id="navControl" onClick={toggleNavbar}>
             {isOpen ? (

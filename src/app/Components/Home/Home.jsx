@@ -48,7 +48,7 @@ export default function Home() {
         <nav>
           <Navbar />
         </nav>
-        <main className="px-10 md:px-24">
+        <main className="px-2 sm:px-10 md:px-24 max-w-[100%]">
           <Intro />
           <AboutMe />
           <Work />

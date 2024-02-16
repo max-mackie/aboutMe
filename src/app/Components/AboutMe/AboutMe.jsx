@@ -8,10 +8,10 @@ const AboutMe = () => {
       id="about"
       className="text-slate mt-36 sm:mt-96 mx-10 flex flex-col"
     >
-      <h2 className="flex items-center font-bold text-2xl text-lightest-slate">
+      <h2 className="sm:flex whitespace-nowrap items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">01.</span>
         About Me
-        <span className="hidden sm:flex flex-grow bg-dark-slate h-[2px] mx-2 mr-16"></span>
+        <div className="mt-2 sm:w-[100%] sm:flex-grow bg-dark-slate h-[2px] sm:mt-0 sm:mx-2 mr-16"></div>
       </h2>
       <div className="flex flex-col lg:flex-row md:items-center">
         <div>
@@ -67,7 +67,7 @@ const AboutMe = () => {
               width={200}
               height={200}
             />
-            <div className="bg-green top-0 absolute w-full h-full rounded z-20 opacity-30 hover-hidden"></div>
+            <div className="bg-green top-0 absolute w-full h-full rounded z-10 opacity-30 hover-hidden"></div>
             <div className=" border border-green absolute ml-5 mt-5 top-0 w-full h-full rounded hover-down"></div>
           </div>
         </div>

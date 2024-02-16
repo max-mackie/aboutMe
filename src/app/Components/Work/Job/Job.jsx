@@ -4,7 +4,7 @@ import AnimatedLink from "../../Misc/AnimatedLink";
 const Job = ({ props }) => {
   return (
     <section className="">
-      <h3 className="text-xl font-bold mt-10 sm:mt-1 flex items-start">
+      <h3 className="text-xl font-bold md:mt-1 mt-10 flex items-start">
         {props.role}
         {props.url && (
           <div className="flex items-start">

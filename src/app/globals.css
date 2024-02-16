@@ -33,3 +33,7 @@ body {
 .left-40 {
   left: 40%;
 }
+
+html {
+  scroll-behavior: smooth;
+}
