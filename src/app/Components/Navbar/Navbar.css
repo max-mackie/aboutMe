@@ -51,7 +51,7 @@
 }
 
 /* Responsive design */
-@media (min-width: 768px) { /* Tailwind's 'md' breakpoint is 768px by default */
+@media (min-width: 769px) { /* Tailwind's 'md' breakpoint is 768px by default */
   .responsive-show {
     display: none;
   }

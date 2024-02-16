@@ -10,7 +10,7 @@ const Contact = () => {
       className="flex flex-col text-slate mt-48 mx-10 items-center"
     >
       <h3 className="text-xl font-normal text-green">04. What&apos;s Next?</h3>
-      <h2 className="flex items-center font-bold text-5xl text-lightest-slate my-5">
+      <h2 className="text-center font-bold text-5xl text-lightest-slate my-5">
         Get In Touch
       </h2>
       <p className="max-w-[700px] text-lg text-center mb-10">

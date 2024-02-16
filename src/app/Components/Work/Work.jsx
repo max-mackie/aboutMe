@@ -49,7 +49,7 @@ const Work = () => {
               style={highlightStyle}
             />
           )}
-          <div className="my-responsive-width">
+          <div className="absolute my-responsive-width">
             <div
               ref={buttonsRef}
               className="flex md:flex-col overflow-x-auto whitespace-nowrap"
