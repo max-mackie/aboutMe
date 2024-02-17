@@ -31,7 +31,7 @@ const Work = () => {
   return (
     <section
       id="experience"
-      className="text-slate mt-48 mx-10 mr-10 flex flex-col relative"
+      className="text-slate mt-48 mx-10 mr-10 flex flex-col relative scroll-mt-36"
     >
       <h2 className="sm:flex whitespace-nowrap items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">02.</span>
