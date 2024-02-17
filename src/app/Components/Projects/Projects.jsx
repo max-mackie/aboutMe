@@ -4,7 +4,10 @@ import "./Projects.css";
 
 const Projects = () => {
   return (
-    <section id="projects" className="flex flex-col text-slate mt-48 mx-10">
+    <section
+      id="projects"
+      className="flex flex-col text-slate mt-48 mx-10 scroll-mt-36"
+    >
       <h2 className="sm:flex mb-10 whitespace-nowrap items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">03.</span>
         Some Things I&apos;ve Built
@@ -12,7 +15,7 @@ const Projects = () => {
       </h2>
       <div className="flex justify-center justify-center items-center responsive-hide">
         <div className="relative w-full max-w-7xl flex justify-between items-center">
-          <div className="w-2/3 xl:w-1/2 z-10">
+          <div className="w-2/3 xl:w-1/2 z-2">
             <Image
               className="rounded " //need to make sure nav bar is higher than this
               src="/IMG_0562.jpg" // Make sure the file name is URL-friendly
@@ -25,7 +28,7 @@ const Projects = () => {
               height={100}
             />
           </div>
-          <div className="absolute left-40 p-8 rounded-lg text-right z-20 ">
+          <div className="absolute left-40 p-8 rounded-lg text-right z-4 ">
             <h5 className="text-green pb-2">Featured Project</h5>
             <h3 className="text-2xl font-bold text-lightest-slate pb-8">
               Machine Learning Publication
@@ -49,7 +52,7 @@ const Projects = () => {
       </div>
       <div className=" relative bg-[url('/IMG_0562.jpg')] bg-contain bg-center bg-no-repeat py-10 px-5 responsive-showen">
         <div className="absolute inset-0 bg-dark-navy bg-opacity-90 w-full h-auto"></div>
-        <div className="relative z-10 text-lightest-slate text-right">
+        <div className="relative z-2 text-lightest-slate text-right">
           <h5 className="text-green pb-2">Featured Project</h5>
           <h3 className="text-2xl font-bold text-lightest-slate pb-8">
             Machine Learning Publication

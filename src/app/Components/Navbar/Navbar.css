@@ -115,8 +115,3 @@
 .uncollapseIcon {
   animation: uncollapseIcon 0.2s linear;
 }
-
-/* .backdropfilter {
-  z-index: 30;
-  backdrop-filter: blur(12px);
-} */

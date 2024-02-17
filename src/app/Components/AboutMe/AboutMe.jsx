@@ -6,7 +6,7 @@ const AboutMe = () => {
   return (
     <section
       id="about"
-      className="text-slate mt-36 sm:mt-96 mx-10 flex flex-col"
+      className="text-slate mt-36 sm:mt-96 mx-10 flex flex-col scroll-mt-36"
     >
       <h2 className="sm:flex whitespace-nowrap items-center font-bold text-2xl text-lightest-slate">
         <span className="text-lg font-normal text-green mr-4">01.</span>
@@ -26,10 +26,10 @@ const AboutMe = () => {
             engineer building custom applications for BMI group and I have
             published achidemic research in the feild of AI
           </p>
-          <p className="mt-4 ">
+          {/* <p className="mt-4 ">
             I have also continued developing in my free time building websites
             for XXX and XXX
-          </p>
+          </p> */}
           <p className="mt-4">
             Here are a few technologies I&apos;ve been working with recently:
           </p>
